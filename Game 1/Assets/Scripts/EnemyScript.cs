@@ -12,18 +12,14 @@ public class EnemyScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = 5;
+        //speed = 8;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        transform.Translate(speed * Time.deltaTime * flag, 0, 0);
-
-        //print(transform.position.x);
-        //transform.position.x;
-        //transform.Translate();
+        transform.Translate(speed * Time.deltaTime * flag, 0, 0, Space.World);
+        print(speed);
     }
 
     private void OnCollisionEnter(Collision collision)
