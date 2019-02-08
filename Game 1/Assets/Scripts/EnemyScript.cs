@@ -18,6 +18,7 @@ public class EnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        speed = Speed.speed;
         transform.Translate(speed * Time.deltaTime * flag, 0, 0, Space.World);
         print(speed);
     }

@@ -11,7 +11,7 @@ public class Projectile : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         print(transform.up);
-        rb.AddForce(transform.up);
+        rb.AddForce(transform.up * 100, ForceMode.Impulse);
     }
 
     // Update is called once per frame

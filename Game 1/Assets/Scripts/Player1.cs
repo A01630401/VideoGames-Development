@@ -6,12 +6,13 @@ using UnityEngine.UI;
 public class Player1 : MonoBehaviour
 {
     public Text score;
-    public EnemyScript enemy;
+    private GameObject enemy;
     private Vector3 position;
 
     // Start is called before the first frame update
     void Start()
     {
+        enemy = GameObject.Find("Enemy");
         position = transform.position;
     }
 
@@ -32,7 +33,7 @@ public class Player1 : MonoBehaviour
         {
             int score1 = int.Parse(score.text) + 100;
             score.text = "" + score1;
-            //enemy.speed = enemy.speed + 5;
+            Speed.speed += 5;
             transform.SetPositionAndRotation(position, transform.rotation);
             
         }
