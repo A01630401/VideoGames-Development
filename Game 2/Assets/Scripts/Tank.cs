@@ -19,6 +19,6 @@ public class Tank : MonoBehaviour
         if (!turn)
             transform.Translate(h * 10 * Time.deltaTime, 0, 0, Space.World);
         else
-            tank2.transform.Translate(h * 10 * Time.deltaTime, 0, 0, Space.World);
+            tank2.transform.Translate((-1) * h * 10 * Time.deltaTime, 0, 0, Space.World);
     }
 }

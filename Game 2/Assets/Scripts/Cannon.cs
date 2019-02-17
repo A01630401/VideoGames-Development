@@ -34,6 +34,7 @@ public class Cannon : MonoBehaviour
         }
         else
         {
+            transform.eulerAngles = new Vector3(rot, 0, 0);
             cannon2.transform.eulerAngles = new Vector3(rot, 0, 0);
             if (lastJ == 0 && j == 1)
             {
