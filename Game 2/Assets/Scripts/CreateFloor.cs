@@ -35,7 +35,6 @@ public class CreateFloor : MonoBehaviour
                 l = 0;
             }
             int rand = (int) Random.Range(1, 20);
-            //print(rand);
             int rand2 = (int)Random.Range(2, 17);
             positions = new Vector3(reference.position.x + rand, reference.position.y + l, reference.position.z + rand2);
             Instantiate(original, positions, reference.rotation);

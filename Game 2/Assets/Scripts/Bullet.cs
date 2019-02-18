@@ -22,4 +22,12 @@ public class Bullet : MonoBehaviour
     {
         
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.transform.name == "Tank")
+            print("Tank 2 wins");
+        else if (collision.transform.name == "Tank 2")
+            print("Tank 1 wins");
+    }
 }
