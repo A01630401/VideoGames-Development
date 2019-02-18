@@ -220,7 +220,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 391968161}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -634,7 +634,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   original: {fileID: 2480703162826130873}
-  reference: {fileID: 4009176880781572648}
 --- !u!65 &1158344106
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -655,7 +654,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1158344104}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -746,7 +745,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1433023608}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1099,7 +1098,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2002449182}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1190,7 +1189,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2039646561}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1332,12 +1331,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 206812402378207892}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &4009176880781572648 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4009176880781572648, guid: 03ca896882fed264a880937e1f6591e6,
-    type: 3}
-  m_PrefabInstance: {fileID: 206812402378207892}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7774201634086256900
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1353,17 +1346,17 @@ PrefabInstance:
     - target: {fileID: 5967529074426425006, guid: 0fc65e4c535a32a45811ff5daf9f5072,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.144
+      value: -4.91
       objectReference: {fileID: 0}
     - target: {fileID: 5967529074426425006, guid: 0fc65e4c535a32a45811ff5daf9f5072,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.03
+      value: 10.13
       objectReference: {fileID: 0}
     - target: {fileID: 5967529074426425006, guid: 0fc65e4c535a32a45811ff5daf9f5072,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.84
+      value: -1.74
       objectReference: {fileID: 0}
     - target: {fileID: 5967529074426425006, guid: 0fc65e4c535a32a45811ff5daf9f5072,
         type: 3}
