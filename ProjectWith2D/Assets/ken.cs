@@ -19,5 +19,13 @@ public class ken : MonoBehaviour
 
         transform.Translate(h * 5 * Time.deltaTime, 0, 0);
         a.SetFloat("moving", h);
+
+        if (Input.GetButton("Jump"))
+            a.SetTrigger("hadouken");
+    }
+
+    public void throwHadouken()
+    {
+
     }
 }
