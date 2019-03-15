@@ -10,11 +10,21 @@ public class Agent : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        agent.destination = Vector3.zero;
     }
 
     // Update is called once per frame
     void Update()
     {
-        agent.destination = Vector3.zero;
+        if (Input.GetMouseButtonUp(0))
+        {
+            Ray rayito = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if(Physics.Raycast(rayito, out hit))
+            {
+                agent.destination = hit.point;
+            }
+        }
     }
 }
