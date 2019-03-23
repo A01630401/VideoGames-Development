@@ -284,6 +284,7 @@ GameObject:
   - component: {fileID: 492455429}
   - component: {fileID: 492455428}
   - component: {fileID: 492455427}
+  - component: {fileID: 492455431}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -363,6 +364,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &492455431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492455426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4384381cb37101b41ac31d20a2a710c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  start: {fileID: 1523746337}
+  end: {fileID: 524404694}
 --- !u!1001 &524404693
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -443,16 +458,6 @@ PrefabInstance:
     - target: {fileID: 355870732462703405, guid: c14fe804cbe84fb40937a81ec79e9a08,
         type: 3}
       propertyPath: neighbors.Array.data[1]
-      value: 
-      objectReference: {fileID: 946382490}
-    - target: {fileID: 355870732462703405, guid: c14fe804cbe84fb40937a81ec79e9a08,
-        type: 3}
-      propertyPath: neighbors.Array.data[2]
-      value: 
-      objectReference: {fileID: 1494728141}
-    - target: {fileID: 355870732462703405, guid: c14fe804cbe84fb40937a81ec79e9a08,
-        type: 3}
-      propertyPath: neighbors.Array.data[3]
       value: 
       objectReference: {fileID: 946382490}
     m_RemovedComponents: []
@@ -646,17 +651,17 @@ PrefabInstance:
         type: 3}
       propertyPath: neighbors.Array.data[0]
       value: 
-      objectReference: {fileID: 1690002500}
+      objectReference: {fileID: 946382490}
     - target: {fileID: 355870732462703405, guid: c14fe804cbe84fb40937a81ec79e9a08,
         type: 3}
       propertyPath: neighbors.Array.data[1]
       value: 
-      objectReference: {fileID: 1523746337}
+      objectReference: {fileID: 1690002500}
     - target: {fileID: 355870732462703405, guid: c14fe804cbe84fb40937a81ec79e9a08,
         type: 3}
       propertyPath: neighbors.Array.data[2]
       value: 
-      objectReference: {fileID: 946382490}
+      objectReference: {fileID: 1523746337}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c14fe804cbe84fb40937a81ec79e9a08, type: 3}
 --- !u!114 &1494728141 stripped
@@ -985,8 +990,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 2112804552}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93b1139a55de1584bb52b46e4049d0af, type: 3}
+  m_Script: {fileID: 11500000, guid: 1bf9876dca8e1d44fb178d2964a47320, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: {fileID: 0}
-  end: {fileID: 0}
+  start: {fileID: 524404694}
+  end: {fileID: 1690002500}
