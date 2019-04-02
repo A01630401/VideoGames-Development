@@ -81,7 +81,56 @@ public class Pathfinding {
         return null;
     }
 
-    public static LinkedList<Waypoint> AStar(Waypoint start, Waypoint end) {
+    public static List<Waypoint> AStar(Waypoint start, Waypoint end) {
+
+        List<Waypoint> visited, work;
+        visited = new List<Waypoint>();
+        work = new List<Waypoint>();
+
+        start.history = new List<Waypoint>();
+        visited.Add(start);
+        work.Add(start);
+        start.g = 0;
+        start.h = 0;
+
+        while(work.Count > 0) {
+
+            // the next one to process
+            Waypoint actual = work[0];
+            for(int i = 1; i < work.Count; i++) {
+                if(work[i].F < actual.F) {
+                    actual = work[i];
+                }
+            }
+
+            work.Remove(actual);
+
+            // we could check if its the target node
+            // bur we're going to do it later
+            foreach (Waypoint currentNeighbor in actual.neighbors) {
+                if (!visited.Contains(currentNeighbor)) {
+                    // check if its the target
+                    if(currentNeighbor == end) {
+                        List<Waypoint> result = actual.history;
+                        result.Add(currentNeighbor);
+                        return result;
+                    }
+
+                    // calculate g and h for each neighbor
+                    currentNeighbor.g = actual.g + Vector3.Distance(actual.transform.position, currentNeighbor.transform.position);
+
+                    currentNeighbor.h = Vector3.Distance(currentNeighbor.transform.position, end.transform.position);
+
+                    currentNeighbor.history = new List<Waypoint>(actual.history);
+                    currentNeighbor.history.Add(actual);
+
+                    work.Add(currentNeighbor);
+                    work.Add(currentNeighbor);
+                }
+            }
+
+        }
+
         return null;
     }
 }

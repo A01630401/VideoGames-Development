@@ -7,6 +7,15 @@ public class Waypoint : MonoBehaviour
 
     public Waypoint[] neighbors;
     public List<Waypoint> history;
+    public float g, h;
+
+    // property
+    // refined mechanism that does the same (and more) than the accessor methods
+    public float F {
+        get {
+            return g + h;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
