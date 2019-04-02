@@ -14,6 +14,9 @@ public class Character : MonoBehaviour
 
     public float threshold;
 
+    public Material mat;
+
+    private bool flag = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +24,8 @@ public class Character : MonoBehaviour
 
         path = Pathfinding.Depthwise(start, end);
         current = 0;
+
+        StartCoroutine("Patrol");
     }
 
     // Update is called once per frame
@@ -33,6 +38,11 @@ public class Character : MonoBehaviour
             if (Physics.Raycast(rayito, out hit)) {
                 agent.destination = hit.point;
             }
+
+            StopCoroutine("Patrol");
+            flag = false;
+            print("Not Patrol");
+            GetComponent<MeshRenderer>().material = null;
         }
         else {
             agent.destination =  path[current].transform.position;
@@ -45,6 +55,10 @@ public class Character : MonoBehaviour
                 current++;
                 current %= path.Count;
             }
+
+            if (!flag)
+                StartCoroutine("Patrol");
+
         }
 
         
@@ -52,5 +66,14 @@ public class Character : MonoBehaviour
           //  current++;
             //current %= path.Count;
         //}
+    }
+
+    IEnumerator Patrol() {
+        while (true) {
+            GetComponent<MeshRenderer>().material = mat;
+            yield return new WaitForSeconds(1);
+            print("Patrol");
+            flag = true;
+        }
     }
 }

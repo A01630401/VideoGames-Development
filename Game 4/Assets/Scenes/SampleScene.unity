@@ -799,6 +799,7 @@ MonoBehaviour:
   start: {fileID: 866102589}
   end: {fileID: 1081087096854315616}
   threshold: 1
+  mat: {fileID: 2100000, guid: b2135a9d29e79114bb83862712be215c, type: 2}
 --- !u!195 &1138795192
 NavMeshAgent:
   m_ObjectHideFlags: 0
