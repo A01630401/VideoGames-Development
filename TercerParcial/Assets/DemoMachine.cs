@@ -40,21 +40,39 @@ public class DemoMachine : MonoBehaviour
         currentBehaviour = gameObject.AddComponent(currentState.Behaviour) as MonoBehaviour;
     }
 
+    /*void ChangeState(Symbol symbol) {
+        currentState = playing;
+        currentBehaviour = gameObject.AddComponent(currentState.Behaviour) as MonoBehaviour;
+    }*/
+
+    void ChangeState(Symbol symbol) {
+      State tempState = currentState.ApplySymbol(symbol);
+
+      if(tempState != currentState){
+        currentState = tempState;
+        // Check if the state is a different one
+        Destroy(currentBehaviour);
+      }
+    }
+
     // Update is called once per frame
     void Update()
     {
         //print(currentState.Name);
 
         if (Input.GetKeyUp(KeyCode.H)) {
-            currentState = currentState.ApplySymbol(getHungry);
+            ChangeState(getHungry);
+            //currentState = currentState.ApplySymbol(getHungry);
         }
 
         if (Input.GetKeyUp(KeyCode.D)) {
-            currentState = currentState.ApplySymbol(getsDark);
+            ChangeState(getsDark);
+            //currentState = currentState.ApplySymbol(getsDark);
         }
 
         if (Input.GetKeyUp(KeyCode.B)) {
-            currentState = currentState.ApplySymbol(getsBall);
+            ChangeState(getsBall);
+            //currentState = currentState.ApplySymbol(getsBall);
         }
     }
 }
